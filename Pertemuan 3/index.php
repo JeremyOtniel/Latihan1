@@ -42,6 +42,7 @@ $hasil = mysqli_query($db, $query);
 			?>
 		</select>
 		<input type="submit" name="filter" value="Filter" />
+		<input type="submit" name="reset" value="Reset" />
 	</form>
 </div>
 <div id="search">
