@@ -1,10 +1,10 @@
 <?php // filename: kategori.php
-//1. Koneksi
-include("koneksi.php");
-
-//2. Query 
-$query = "SELECT * FROM kategori";
-$hasil = mysqli_query($db, $query);
+	//koneksi
+	include("koneksi.php");
+	
+	//query
+	$query = "SELECT * FROM kategori";
+	$hasil = mysqli_query($db, $query);
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ $hasil = mysqli_query($db, $query);
 				<td><?php echo $i; ?></td>
 				<td><?php echo $row['keterangan']; ?></td>
 				<td>
-					<a href="">View Kontak</a> | 
+					<a href="">View Kontak</a> |					
 					<a href="form_edit_kategori.php?id=<?php echo $row['id']; ?>">Edit</a> | 
 					<a href="delete_kategori.php?id=<?php echo $row['id']; ?>">Delete</a>
 				</td>

@@ -1,15 +1,16 @@
-<?php 
-//1. Koneksi
-include ("koneksi.php");
-
-//Data dari Form
-$id = $_POST['id'];
-$ket = mysqli_real_escape_string($db, $_POST['ket']);
-
-//2. Query 
-$query = "UPDATE kategori 
-		  SET keterangan = '$ket'
-		  WHERE id=$id";
-mysqli_query($db, $query);
-
-header('Location: kategori.php');
+<?php
+	// 1. koneksi
+	include("koneksi.php");
+	
+	//2. data dari form
+	$id = $_POST['id'];
+	$ket = mysqli_real_escape_string($db, $_POST['ket']);
+	
+	//3. query
+	$query = "UPDATE kategori
+			  SET keterangan = '$ket'
+			  WHERE id=$id";
+	mysqli_query($db, $query);
+	
+	header('Location: kategori.php');
+?>
