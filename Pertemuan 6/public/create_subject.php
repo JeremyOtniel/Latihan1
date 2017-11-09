@@ -17,10 +17,10 @@ if (isset($_POST['submit'])){
 	$result = mysqli_query($connection, $query);
 
 	if ($result){
-		$message = "Subject Created";
+		$_SESSION["message"] = "Subject Created";
 		redirect_to("manage_content.php");
 	} else {
-		$message = "Subject Creation failed";
+		$_SESSION["message"] = "Subject Creation failed";
 		redirect_to("new_subject.php");
 	}
 
